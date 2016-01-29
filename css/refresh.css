@@ -1,0 +1,88 @@
+.refresh {
+}
+.refresh-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.refresh-container-front,
+.refresh-container-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.refresh-container-front {
+    z-index: 3;
+}
+.refresh-container-back {
+    z-index: 2;
+}
+
+.refresh-push {
+    overflow: hidden;
+}
+
+.refresh-flip {
+    -ms-perspective: 800px;
+    -moz-perspective: 800px;
+    -webkit-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}
+.refresh-flip .refresh-container {
+    -ms-transition: 1.0s;
+    -moz-transition: 1.0s;
+    -webkit-transition: 1.0s;
+    -o-transition: 1.0s;
+    transition: 1.0s;
+    -ms-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.refresh-flip .refresh-container-front,
+.refresh-flip .refresh-container-back {
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.refresh-flip .refresh-container-front,
+.refresh-flip.left .refresh-container-front
+.refresh-flip.right .refresh-container-front {
+    -ms-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.refresh-flip .refresh-container-back,
+.refresh-flip.left .refresh-container-back,
+.refresh-flip.right .refresh-container-back {
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.refresh-flip.top .refresh-container-front,
+.refresh-flip.bottom .refresh-container-front {
+    -ms-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+.refresh-flip.top .refresh-container-back,
+.refresh-flip.bottom .refresh-container-back {
+    -ms-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}

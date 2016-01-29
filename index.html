@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN" xml:lang="zh" xmlns="http://www.w3.org/1999/xhtml" style="">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+    <title>REFRESH</title>
+    <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/refresh.css" />
+    <script type="text/javascript" src="js/refresh.js"></script>
+    <style type="text/css">
+        .refresh-container-front,
+        .refresh-container-back {
+            line-height: 200px;
+            color: #fff;
+            text-align: center;
+            font-size: 30pt;
+        }
+        .refresh-container-front {
+            background: #337ab7;
+        }
+        .refresh-container-back {
+            background: #f0ad4e;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            var i = 1;
+            var a1 = $('#a1').refresh({ type: 'flip', direction: 'left' });
+            a1.$el.on('click', function() {
+                a1.refresh(i++, function() {
+                    this.$currentBack.css('color', '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6));
+                });
+            });
+            var a2 = $('#a2').refresh({ type: 'flip', direction: 'right' });
+            a2.$el.on('click', function() {
+                a2.refresh(i++, function() {
+                    this.$currentBack.css('color', '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6));
+                });
+            });
+            var a3 = $('#a3').refresh({ type: 'flip', direction: 'top' });
+            a3.$el.on('click', function() {
+                a3.refresh(i++, function() {
+                    this.$currentBack.css('color', '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6));
+                });
+            });
+            var a4 = $('#a4').refresh({ type: 'flip', direction: 'bottom' });
+            a4.$el.on('click', function() {
+                a4.refresh(i++, function() {
+                    this.$currentBack.css('color', '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6));
+                });
+            });
+            var b1 = $('#b1').refresh({ type: 'push', direction: 'left' });
+            b1.$el.on('click', function() {
+                b1.refresh(i++, function() {
+                    this.$currentBack.css('color', '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6));
+                });
+            });
+            var b2 = $('#b2').refresh({ type: 'push', direction: 'right' });
+            b2.$el.on('click', function() {
+                b2.refresh(i++, function() {
+                    this.$currentBack.css('color', '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6));
+                });
+            });
+            var b3 = $('#b3').refresh({ type: 'push', direction: 'top' });
+            b3.$el.on('click', function() {
+                b3.refresh(i++, function() {
+                    this.$currentBack.css('color', '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6));
+                });
+            });
+            var b4 = $('#b4').refresh({ type: 'push', direction: 'bottom' });
+            b4.$el.on('click', function() {
+                b4.refresh(i++, function() {
+                    this.$currentBack.css('color', '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6));
+                });
+            });
+            var c1 = $('#c1').refresh({ type: 'fade' });
+            c1.$el.on('click', function() {
+                c1.refresh(i++, function() {
+                    this.$currentBack.css('color', '#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6));
+                });
+            });
+        });
+    </script>
+</head>
+
+<body style="">
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-md-3">
+                <div id="a1" class="" style="width: 100%; height: 200px; background-color: #aaa;">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="a2" style="width: 100%; height: 200px; background-color: #bbb;">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="a3" style="width: 100%; height: 200px; background-color: #bbb;">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="a4" style="width: 100%; height: 200px; background-color: #bbb;">
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-3">
+                <div id="b1" style="width: 100%; height: 200px; background-color: #ccc;">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="b2" style="width: 100%; height: 200px; background-color: #ccc;">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="b3" style="width: 100%; height: 200px; background-color: #ccc;">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div id="b4" style="width: 100%; height: 200px; background-color: #ccc;">
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-3">
+                <div id="c1" style="width: 100%; height: 200px; background-color: #ccc;">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
